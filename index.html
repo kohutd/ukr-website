@@ -2,102 +2,142 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>укр - встановлювач авторських програм</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>укр — Встановлювач авторських програм</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+          content="Інструмент для встановлення українських авторських програм: Мавка, Ціль та інші. Встановлення через одну bash-команду.">
+    <meta name="keywords" content="укр, мавка, ціль, встановлювач, bash, cli, open source, програми">
+    <meta name="author" content="kohutd">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="укр — Встановлювач авторських програм">
+    <meta property="og:description"
+          content="Встановлюйте Мавку, Ціль та інші програми зручно і безпечно через рядок команд.">
+    <meta property="og:url" content="https://github.com/kohutd/ukr">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/svg+xml"
+          href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTAiIGZpbGw9IiMxZTkwZmYiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIKICAgICAgICBmb250LXNpemU9IjIyIiBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC13ZWlnaHQ9ImJvbGQiPgogICAg0KPQmtCgCiAgPC90ZXh0Pgo8L3N2Zz4K">
 
     <style>
-      html, body {
-        padding: 0;
+      :root {
+        --primary: #1e90ff;
+        --background: #ffffff;
+        --text: #222;
+        --code-bg: #fff9e5;
+        --code-border: #e6dfb6;
+        --font-main: system-ui, sans-serif;
+      }
+
+      body {
         margin: 0;
-        font-family: sans-serif;
+        padding: 0;
+        font-family: var(--font-main);
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.6;
       }
 
-      *, *::after, *::before {
-        box-sizing: border-box;
+      main {
+        max-width: 800px;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
       }
 
-      header, main, footer {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 1rem;
+      header {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--primary);
       }
 
-      h1, h2, h3 {
-        max-width: 40ch;
+      header h1 {
+        font-size: 2rem;
+        margin: 0;
+        color: var(--primary);
+      }
+
+      header p {
+        font-size: 1.1rem;
+        max-width: 50ch;
       }
 
       h2 {
-        font-style: italic;
-        color: dodgerblue;
-      }
-
-      h1 {
-        color: darkslategray;
-      }
-
-      a {
-        color: dodgerblue;
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        color: var(--primary);
       }
 
       code {
-        padding: 0.25rem;
-        background: lightgoldenrodyellow;
-        color: black;
-        border-radius: 0.25rem;
+        display: block;
+        background: var(--code-bg);
+        border-left: 4px solid var(--primary);
+        padding: 0.75rem 1rem;
+        margin: 1rem 0;
+        font-family: monospace;
+        border-radius: 4px;
+        font-size: 0.95rem;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        text-align: center;
+        color: #555;
+      }
+
+      footer a {
+        font-weight: bold;
       }
     </style>
 </head>
 <body>
 
-<header>
-    <h2>укр</h2>
-    <h1>Встановлюйте <a href="https://мавка.укр">Мавку</a>, <a href="https://ціль.укр">Ціль</a> та інші авторські
-        програми безпечно та зручно</h1>
-</header>
-
 <main>
-    <h3>Встановлення</h3>
-    <p>
+    <header>
+        <h1>укр — Встановлювач авторських програм</h1>
+        <p>
+            Встановлюйте <a href="https://мавка.укр">Мавку</a>, <a href="https://ціль.укр">Ціль</a> та інші українські
+            авторські програми безпечно й зручно через рядок команд.
+        </p>
+    </header>
+
+    <section>
+        <h2>Встановлення</h2>
         <code>curl -o- https://raw.githubusercontent.com/kohutd/ukr/main/встановити.bash | bash</code>
-    </p>
+    </section>
 
-    <h3>Використання</h3>
-    <p>
+    <section>
+        <h2>Команди</h2>
         <code>укр встановити &lt;програма&gt; &lt;версія&gt;</code>
-    </p>
-    <p>
         <code>укр використовувати &lt;програма&gt; &lt;версія&gt;</code>
-    </p>
-    <p>
         <code>укр видалити &lt;програма&gt; &lt;версія&gt;</code>
-    </p>
-    <p>
         <code>укр поточна &lt;програма&gt;</code>
-    </p>
-    <p>
         <code>укр встановлені &lt;програма&gt;</code>
-    </p>
-    <p>
         <code>укр доступні &lt;програма&gt;</code>
-    </p>
-    <p>
         <code>укр програми</code>
-    </p>
+    </section>
 
-    <h3>Приклади</h3>
-    <p>
+    <section>
+        <h2>Приклади</h2>
         <code>укр встановити ціль</code>
-    </p>
-    <p>
         <code>укр встановити мавка 0.121.3</code>
-    </p>
-</main>
+    </section>
 
-<footer>
-    GitHub: <a href="https://github.com/kohutd/ukr">https://github.com/kohutd/ukr</a>
-</footer>
+    <footer>
+        GitHub: <a href="https://github.com/kohutd/ukr">github.com/kohutd/ukr</a>
+    </footer>
+</main>
 
 </body>
 </html>

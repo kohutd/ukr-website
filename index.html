@@ -123,7 +123,7 @@
 <main>
     <header>
         <div class="Logo">
-            <svg width="17" height="5" viewBox="0 0 17 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg aria-label="укр" width="17" height="5" viewBox="0 0 17 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="6" width="1" height="1" fill="#1E90FF"/>
                 <rect x="6" y="2" width="1" height="1" fill="#1E90FF"/>
                 <rect x="6" y="3" width="1" height="1" fill="#1E90FF"/>
@@ -160,6 +160,8 @@
                 <rect x="4" y="2" width="1" height="1" fill="#1E90FF"/>
                 <rect x="4" y="3" width="1" height="1" fill="#1E90FF"/>
             </svg>
+
+            <span class="Version">0.2.0</span>
         </div>
         <p>
             Встановлюйте <a href="https://мавка.укр">Мавку</a>, <a href="https://ціль.укр">Ціль</a> та інші українські
@@ -187,6 +189,13 @@
         <h2>Приклади</h2>
         <code>укр встановити ціль</code>
         <code>укр встановити мавка <span id="latestMavkaVersion">а.б.в</span></code>
+    </section>
+
+    <section>
+        <h2>Перевстановлення</h2>
+        <p>Щоб перевстановити або оновити сам укр, спочатку видаліть стару версію:</p>
+        <code>rm -rf ~/.укр</code>
+        <p>Потім виконайте команду встановлення знову (та що вище).</p>
     </section>
 
     <footer>
